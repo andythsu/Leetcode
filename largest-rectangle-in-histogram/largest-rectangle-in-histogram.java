@@ -1,4 +1,5 @@
 class Solution {
+    /* try to expand the current histogram. If the next histogram is shorter than current one, we need to find the histogram from the history that can expand to current histogram. */
     public int largestRectangleArea(int[] heights) {
         Stack<Integer> stack = new Stack<>();
         int maxArea = 0;

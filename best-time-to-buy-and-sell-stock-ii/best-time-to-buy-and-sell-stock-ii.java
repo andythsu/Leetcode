@@ -9,6 +9,7 @@ class Solution {
             // find local maximum
             while(i < prices.length - 1 && prices[i+1] > prices[i]) i++;
             gain += prices[i] - min;
+            // avoid infinite loop
             i++;
         }
         return gain;

@@ -12,7 +12,6 @@ class Solution {
                 map.put(curDomain, map.getOrDefault(curDomain, 0) + count);
             }
         }
-        System.out.println(map);
         List<String> res = new ArrayList<>();
         for(String domain : map.keySet()){
             res.add(map.get(domain) + " " + domain);

@@ -4,7 +4,6 @@ class Solution {
         int[] count = new int[128];
         // store frequency of each char
         for(char c : s.toCharArray()){
-            System.out.println((int)c);
             count[c]++;
         }
         // if we find an even frequency, we can make a palindrome out of it. We divide it by 2 first to get the floor of the value, then multiply by 2 to get the actual result

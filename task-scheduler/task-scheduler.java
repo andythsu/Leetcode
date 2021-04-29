@@ -16,6 +16,7 @@ class Solution {
             int remaining = f - (maxGroups - 1);
             answer += remaining > 0 ? remaining : 0;
         }
+        // if the length is > answer, that means we can fit all in without having idles. If that's the case, we simply return length
         return Math.max(answer, tasks.length);
     }
 }

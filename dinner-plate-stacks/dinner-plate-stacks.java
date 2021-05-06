@@ -31,7 +31,7 @@ class DinnerPlates {
             int k = stacks.peek().pop();
             while (!stacks.isEmpty() && stacks.peek().isEmpty()) {
                 set.remove(stacks.size() - 1);
-                                stacks.pop();
+                stacks.pop();
             }
             return k;
         }
@@ -50,3 +50,11 @@ class DinnerPlates {
     }
 
 }
+
+/**
+ * Your DinnerPlates object will be instantiated and called as such:
+ * DinnerPlates obj = new DinnerPlates(capacity);
+ * obj.push(val);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.popAtStack(index);
+ */

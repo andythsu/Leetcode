@@ -1,19 +1,18 @@
 class Solution {
-public double myPow(double x, int n) {
-    if (n == 0) return 1;
-    if (n == 1) return x;
-    if (n == -1) return 1 / x;
-
-    final int mid = n / 2;
-
-    if (mid * 2 == n) {
-        // n is even.
-        double powXMID = myPow(x, mid);
-        return powXMID * powXMID;
-    } else {
-        // n is odd.
-        double powXMID = myPow(x, mid);
-        return powXMID * powXMID * myPow(x, n - mid * 2);
+    public double myPow(double x, int n) {
+        if(n == 1) return x;
+        if(n == 0) return 1;
+        if(n == -1) return 1/x;
+        
+        int mid = n / 2;
+        
+        // if n is even
+        if(n % 2 == 0){
+            double ans = myPow(x, mid);
+            return ans * ans;
+        }else{
+            double ans = myPow(x, mid);
+            return ans * ans * myPow(x, n - mid * 2);
+        }
     }
-}
 }

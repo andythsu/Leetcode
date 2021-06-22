@@ -4,7 +4,7 @@ class Solution {
         
     }
     public int solution1(int n){
-        // https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/discuss/1246123/Java-dp-solution-for-n-floors-and-x-eggs-(if-you-could-not-come-up-with-the-math-solution)
+        // https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/discuss/1246621/Java-O(1)-or-Intuition-and-Detailed-Reasoning-or-100-time-100-space
         return (int) Math.ceil((Math.sqrt(1 + 8 * n) - 1) / 2);
     }
     public int solution2(int n){

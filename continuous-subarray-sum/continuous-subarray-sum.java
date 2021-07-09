@@ -10,12 +10,12 @@ class Solution {
         for(int i=0; i<nums.length; i++){
             sum += nums[i];
             
-            sum = sum % k;
+            int remainder = sum % k;
             
-            if(map.containsKey(sum)){
-                if(i - map.get(sum) >= 2) return true;
+            if(map.containsKey(remainder)){
+                if(i - map.get(remainder) >= 2) return true;
             }else{
-                map.put(sum, i);
+                map.put(remainder, i);
             }
             
         }
